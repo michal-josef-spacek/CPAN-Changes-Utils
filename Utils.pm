@@ -16,8 +16,8 @@ sub construct_copyright_years {
 	my $changes = shift;
 
 	my $copyright_years;
-	my @years = map { $_->date =~ m/^(\d{4})/ms; defined $1 ? $1 : () }
-		grep { defined $_ && defined $_->date }
+	my @years = map { $_->date =~ m/^(\d{4})/ms; $1 }
+		grep { defined $_->date }
 		$changes->releases;
 	my $year_from = min(@years);
 	my $year_to = max(@years);
