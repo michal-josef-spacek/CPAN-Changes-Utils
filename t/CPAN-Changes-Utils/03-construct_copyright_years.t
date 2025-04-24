@@ -4,7 +4,7 @@ use warnings;
 use CPAN::Changes;
 use CPAN::Changes::Utils qw(construct_copyright_years);
 use File::Object;
-use Test::More 'tests' => 6;
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 
 # Data dir.
@@ -34,3 +34,8 @@ is($ret, undef, 'Get copyright years (undef - release item without year).');
 $changes = CPAN::Changes->load($data_dir->file('ex5.changes')->s);
 $ret = construct_copyright_years($changes);
 is($ret, '2009-2019', 'Get copyright years (2009-2019 - two years).');
+
+# Test.
+$changes = CPAN::Changes->load($data_dir->file('ex6.changes')->s);
+$ret = construct_copyright_years($changes);
+is($ret, '2009-2019', 'Get copyright years (2009-2019 - two years, with release without date).');

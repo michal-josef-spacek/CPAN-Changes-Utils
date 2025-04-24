@@ -25,6 +25,7 @@ t/data/ex2.changes
 t/data/ex3.changes
 t/data/ex4.changes
 t/data/ex5.changes
+t/data/ex6.changes
 Utils.pm
 xt/CPAN-Changes-Utils/01-pod_coverage.t
 xt/CPAN-Changes-Utils/02-pod.t
