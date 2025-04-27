@@ -10,7 +10,7 @@ use Readonly;
 # Constants.
 Readonly::Array our @EXPORT => qw(construct_copyright_years);
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 sub construct_copyright_years {
 	my $changes = shift;
@@ -131,6 +131,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut
