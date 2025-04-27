@@ -49,6 +49,11 @@ CPAN::Changes::Utils - Utilities for CPAN::Changes.
 
  my $copyright_years = construct_copyright_years($changes);
 
+=head1 DESCRIPTION
+
+Utilities for work with CPAN::Changes objects. One utility is subroutine to
+construct copyright years (from-to) from L<CPAN::Changes> instance.
+
 =head1 SUBROUTINES
 
 =head2 C<construct_copyright_years>
